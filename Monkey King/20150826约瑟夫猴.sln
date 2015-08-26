@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20150826约瑟夫猴", "20150826约瑟夫猴\20150826约瑟夫猴.vcproj", "{06F59A8C-EB25-406D-9010-0556ABCCFC6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06F59A8C-EB25-406D-9010-0556ABCCFC6D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{06F59A8C-EB25-406D-9010-0556ABCCFC6D}.Debug|Win32.Build.0 = Debug|Win32
+		{06F59A8C-EB25-406D-9010-0556ABCCFC6D}.Release|Win32.ActiveCfg = Release|Win32
+		{06F59A8C-EB25-406D-9010-0556ABCCFC6D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
