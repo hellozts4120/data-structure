@@ -1,7 +1,7 @@
 #include<stdio.h>
 
-int x[1000000],y[1000000];
-int L[1000000],R[1000000];
+int x[4000005],y[4000005];
+int L[4000005],R[4000005];
 long result = 0;
 
 void QuickSort(int num[],int num1[],int left,int right){
@@ -72,6 +72,8 @@ void Merge_Sort(int left,int right){
 }
 
 int main(){
+	setvbuf(stdin, new char[1 << 20], _IOFBF, 1 << 20);
+	setvbuf(stdout, new char[1 << 20], _IOFBF, 1 << 20);
 	int n;
 	scanf("%d",&n);
 	for(int i = 0; i < n; i++){
