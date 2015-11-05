@@ -39,9 +39,9 @@ int main(){
 		if(!n && !m && !k){
 			break;
 		}
-		memset(board,0,sizeof(board));
-		memset(board_1,0,sizeof(board_1));
-		for(int i = 1; i <= n+1; i++){
+		memset(board,0,sizeof(board));		//保存待执行操作
+		memset(board_1,0,sizeof(board_1));	//保存输出值
+		for(int i = 1; i <= n+1; i++){		//输出值保存在第n+1列内
 			board[i][i] = 1;
 			board_1[i][i] = 1;
 		}
@@ -70,11 +70,11 @@ int main(){
 			}
 		}
 		while(m){
-			if(m & 1){
+			if(m & 1){		//此时无法直接将m执行减半操作，因此先计算出此时的输出结果，再将操作规模减半
 				Multiply(board,board_1,n);
 			}
-			Multiply(board,board,n);
-			m >>= 1;
+			Multiply(board,board,n);	//此步骤每执行一次，实际上是使得待执行矩阵进行了乘二次方操作，因此原操作规模m要减半
+			m >>= 1;	//减半原操作规模m
 		}
 		for(int i = 1; i <= n; i++){
 			cout << board_1[i][n+1] << " ";
