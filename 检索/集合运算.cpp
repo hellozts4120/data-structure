@@ -1,35 +1,36 @@
-#include<iostream>
 #include<cstring>
-#include<vector>
-using namespace std;
+#include<cstdio>
+
+int a[1000010];
+int b[1000010];
 
 int main(){
-	//freopen("in.txt","r",stdin);
-	//freopen("out.txt","w",stdout);
+	freopen("in.txt","r",stdin);
+	freopen("out.txt","w",stdout);
 	int m,n;
 	int temp;
-	cin >> n;
-	vector<int>a(n);
+	scanf("%d",&n);
 	for(int i = 0; i < n; i++){
-		cin >> a[i];
+		scanf("%d",&a[i]);
 	}
-	cin >> m;
+	scanf("%d",&m);
 	int cur = 0;
-	 for(int i = 0; i < m; i++){
-		 cin >> temp;
-		 while(cur < n && temp > a[cur]){
-			 cout << a[cur++] << " ";
-		 }
-		 if(a[cur] == temp){
-			 cur++;
-		 }
-		 else{
-			 cout << temp << " ";
-		 }
-	 }
-	 for(; cur < n; cur++){
-		 cout << a[cur] << " ";
-	 }
-	 cout << endl;
-	 return 0;
+	for(int i = 0; i < m; i++){
+		scanf("%d",&temp);
+		while(temp > a[cur] && cur < n){
+			printf("%d ",a[cur]);
+			cur++;
+		}
+		if(a[cur] == temp){
+			cur++;
+		}
+		else{
+			printf("%d ",temp);
+		}
+	}
+	while(cur < n){
+		printf("%d ",a[cur++]);
+	}
+	printf("\n");
+	return 0;
 }
